@@ -10,6 +10,12 @@ import java.util.Collection;
 import java.util.List;
 
 public class UserDto {
+    //응답 데이터
+    @Getter
+    public static class Login {
+        private String username;
+        private String password;
+    }
 
     //요청 데이터
     @Getter
