@@ -15,9 +15,16 @@ import java.util.*;
 public class AController {
     private final AService aService;
 
+    //등록
+    @PostMapping("/register")
+    public ResponseEntity<String> register(@RequestBody ADto.AReq dto) {
+        aService.register(dto);
+        return ResponseEntity.status(200).body("등록 성공");
+    }
+
     //목록 조회
     @GetMapping("/list")
-    public ResponseEntity list() {
+    public ResponseEntity<List<ADto.ARes>> list() {
         List<ADto.ARes> response = aService.list();
 
         return ResponseEntity.status(200).body(response);

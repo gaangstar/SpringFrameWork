@@ -14,6 +14,12 @@ import java.util.List;
 public class AService {
     private final ARepository aRepository;
 
+    //등록
+    public void register(ADto.AReq dto) {
+
+    }
+
+    //목록 조회
     public List<ADto.ARes> list() {
         List<A> result = aRepository.findAll();
         return result.stream().map(ADto.ARes::from).toList();

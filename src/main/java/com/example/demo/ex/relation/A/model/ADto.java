@@ -26,20 +26,21 @@ public class ADto {
 
             return dto;
         }
+    }
 
-        //요청 데이터
-        @Getter
-        public static class AReq {
-            private String a01;
-            private String a02;
+    //요청 데이터
+    @Getter
+    public static class AReq {
+        private String a01;
+        private String a02;
+        private List<BDto.BReq> bReqList;
 
-            public A toEntity() {
-                A entity = A.builder()
-                        .a01(a01)
-                        .a02(a02)
-                        .build();
-                return entity;
-            }
+        public A toEntity() {
+            A entity = A.builder()
+                    .a01(a01)
+                    .a02(a02)
+                    .build();
+            return entity;
         }
     }
 }
