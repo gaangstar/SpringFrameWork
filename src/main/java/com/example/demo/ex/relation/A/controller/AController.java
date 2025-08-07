@@ -19,6 +19,7 @@ public class AController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody ADto.AReq dto) {
         aService.register(dto);
+        System.out.println(dto.getBReqList());
         return ResponseEntity.status(200).body("등록 성공");
     }
 

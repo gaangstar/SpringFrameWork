@@ -30,6 +30,8 @@ public class ADto {
 
     //요청 데이터
     @Getter
+    @Setter
+    @NoArgsConstructor
     public static class AReq {
         private String a01;
         private String a02;
